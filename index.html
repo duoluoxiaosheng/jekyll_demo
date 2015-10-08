@@ -1,11 +1,22 @@
 ---
 layout: default
-title: "我的Blog"
+title: 我和红红的爱情
 ---
 
-<h2>{{ page.title }}</h2>
-<img src="/jekyll_demo/assets/1.jpeg" hight="300" width="400"/>
-<p>最新文章</p>
+
+
+
+
+<div align="center">
+    <img src="{{site.baseurl}}/assets/pic/1.jpeg" hight="300" width="400" />
+    <img src="{{site.baseurl}}/assets/pic/2.jpg" hight="300" width="400" />
+    <div align="center">
+    <img src="{{site.baseurl}}/assets/pic/3.jpg" hight="300" width="400" />
+    <img src="{{site.baseurl}}/assets/pic/4.jpg" hight="300" width="400" /><br>
+    </div>
+</div>
+
+<<h1>最新文章</h1>
 <ul>
     {% for post in site.posts %}
     <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
