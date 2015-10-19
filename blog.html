@@ -1,0 +1,43 @@
+---
+layout: blog
+title: 文章列表
+---
+
+
+
+<body>
+
+<div id="posts-list" style="display:inline;float:left;width:75%;">
+<ul>
+    {% for post in site.posts %}
+    <li>
+    <h2>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <br>
+    {{ post.excerpt}}
+    <br>
+    >>><a href="{{ site.baseurl }}{{ post.url }}" style="float:center">阅读全文</a>
+    </li>
+    {% endfor %}
+</ul>  
+</div>
+<div id="zuixinpinglun" style="display:inline;float:left">
+最新评论<br>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+<!-- 多说最新评论 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"jekylldemo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</div>
+
+</body>

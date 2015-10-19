@@ -2,14 +2,3 @@
 layout: index
 title: 我和红红的爱情
 ---
-
-<ul>
-    {% for post in site.posts %}
-    <li>
-    <h2>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2><br>
-    
-    {{ post.excerpt | remove:'test'}}
-    
-    </li>
-　　{% endfor %}
-</ul>
