@@ -2,14 +2,16 @@
 <head>
     <meta charset="utf-8"/>
     <title>{{ page.title }}</title>
-
+    <link href="{{site.baseurl}}/css/Navigation/style.css" media="screen" type="text/css"rel="stylesheet">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/Navigation/font-awesome.min.css" type="text/css" >
 </head>
 <html>
-<body>
-<br>
-<a href="{{site.baseurl}}/index.html">返回首页</a>
-<a href="{{site.baseurl}}/blog.html">文章列表</a>
-<br>
+<body style="background:#ffe;">
+
+{%include navigation.html%}
+
+
+<br><br><br><br>
 <div>{{content}}</div>
 
 </body>

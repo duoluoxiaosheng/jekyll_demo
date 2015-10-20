@@ -14,16 +14,18 @@
 
 </style>
 
+<link href="css/Navigation/style.css" media="screen" type="text/css"rel="stylesheet">
+<link rel="stylesheet" href="css/Navigation/font-awesome.min.css" type="text/css" >
 <link href="css/default.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<div id="mainDiv"> 
+<body>
+{%include navigation.html%}
+<div id="mainDiv">    
 	<div id="content">
-            <div style="display:inline"><a href="{{site.baseurl}}/index.html">首页</a></div> 
-            <div style="display:inline"><a href="{{site.baseurl}}/blog.html">文章列表</a></div><br>
 		<div id="code">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*2015-06-01,</span><br />
