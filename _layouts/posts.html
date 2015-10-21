@@ -1,19 +1,25 @@
 <!DOCTYPE html>
+
+<html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{{ page.title }}</title>
     
     <link href="{{site.baseurl}}/css/Navigation/style.css" media="screen" type="text/css"rel="stylesheet">
     <link rel="stylesheet" href="{{site.baseurl}}/css/Navigation/font-awesome.min.css" type="text/css" >
+    
+    <script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/249aca46609042ccbf38e9a74943947b.js"></script>
+    <link href='http://www.youziku.com/webfont/NameCSS/47007' rel='stylesheet' type='text/css'/>
 </head>
 
-<body>
+<body style="background:#ffe;">
 
 {%include navigation.html%}
-
-
-<div style="margin-left:40px;">{{content}}</div>
-
+<h1  id="Title" style="text-align:center;font-size:48px">{{page.title}}</h1>
+<div id="Text" style="text-align:center;font-size:24px">
+    {{content}}
+    <p style="font-family:Jellyka_-_Love_and_Passion46431;">{{ page.date | date_to_long_string }}</p>
+</div>
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="{{page.title}}" data-title="{{page.title}}" 
 data-url="http://duoluoxiaosheng.github.io{{ site.baseurl }}{{ page.url }}"></div>
@@ -32,3 +38,14 @@ var duoshuoQuery = {short_name:"jekylldemo"};
 	</script>
 <!-- 多说公共JS代码 end -->
 </body>
+<script  type="text/javascript">
+$youziku.load("#Title", "249aca46609042ccbf38e9a74943947b", "NaiYou");
+$youziku.load("#Text", "dbcd798155de4b84972ed8926c750633", "minijianyingbikaishu");
+/*[$youziku.load("#id2", "249aca46609042ccbf38e9a74943947b", "NaiYou");]*/
+/*[$youziku.load(".class1", "249aca46609042ccbf38e9a74943947b", "NaiYou");]*/
+/*[$youziku.load(".class1", "249aca46609042ccbf38e9a74943947b", "NaiYou");]*/
+/*[．．．]*/
+$youziku.draw();
+</script>
+
+</html>

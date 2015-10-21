@@ -4,16 +4,16 @@ title: 文章列表
 ---
 
 
+<h2 style="font-family:HeitiSC496652;margin-left:20px;">{{page.title}}</h2>
 
-<body>
-
-<div id="posts-list" style="display:inline;float:left;width:75%;">
+<div id="posts-list" style="display:inline;float:left;width:75%;margin-right:10px;">
 <ul>
     {% for post in site.posts %}
+    <hr style="height:1px;border:none;border-top:1px solid #555555;margin-right:20px;" />
     <li>
     <h2>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     <br>
-    {{ post.excerpt}}
+    {{ post.excerpt | strip_html img }}
     <br>
     >>><a href="{{ site.baseurl }}{{ post.url }}" style="float:center">阅读全文</a>
     </li>
@@ -21,7 +21,7 @@ title: 文章列表
 </ul>  
 </div>
 <div id="zuixinpinglun" style="display:inline;float:left">
-最新评论<br>
+<p style="font-family:HeitiSC496652;margin-left:20px;">最新评论</P><br><br>
 <!-- 多说最新评论 start -->
 	<div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
 <!-- 多说最新评论 end -->
@@ -39,5 +39,3 @@ var duoshuoQuery = {short_name:"jekylldemo"};
 	</script>
 <!-- 多说公共JS代码 end -->
 </div>
-
-</body>
