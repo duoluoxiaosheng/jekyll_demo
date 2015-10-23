@@ -1,0 +1,78 @@
+<!doctyoe heml>
+<html>
+<head>
+<title>{{page.title}}</title>
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link href="{{site.baseurl}}/css/countdown/bootstrap.css" rel="stylesheet" media="screen" />
+<link href="{{site.baseurl}}/css/countdown/style.css" rel="stylesheet" media="screen" />
+<link href="{{site.baseurl}}/css/countdown/bootstrap-responsive.css" rel="stylesheet" media="screen" />
+<link href="{{site.baseurl}}/css/Navigation/style.css" media="screen" type="text/css"rel="stylesheet">
+<link rel="stylesheet" href="{{site.baseurl}}/css/Navigation/font-awesome.min.css" type="text/css" >
+<script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/249aca46609042ccbf38e9a74943947b.js"></script>
+
+<style>
+@font-face {
+	font-family: 'JournalRegular';
+	src: url('{{site.baseurl}}/fonts/journal-webfont.eot');
+	src: url('{{site.baseurl}}/fonts/journal-webfont_162a16fe.eot') format('embedded-opentype'), url('{{site.baseurl}}/fonts/journal-webfont.woff') format('woff'), url('{{site.baseurl}}/fonts/journal-webfont.ttf') format('truetype'), url('{{site.baseurl}}/fonts/journal-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+</style>
+</head>
+
+<body class="page-bg">
+{%include navigation.html%}
+<div class="container">
+    <div class="hero-unit">
+        <h1> 我们要结婚了</h1>
+    </div>
+<div class="clock">
+    <div class="span6"> <img class="img-clock" src="{{site.baseurl}}/assets/countdown/bg-clock.png" alt="clock counter" />
+      <div id="countdown">
+        <div class="days"><span id="days"></span> <ins>/</ins> <em>days /</em></div>
+        <div class="hours"><span id="hours"></span> <ins>/</ins> <em>hours /</em></div>
+        <div class="minutes"><span id="minutes"></span> <ins>/</ins> <em>min /</em></div>
+        <div class="seconds"><span id="seconds"></span><em>sec</em> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{page.title}}" data-title="{{page.title}}" 
+data-url="http://duoluoxiaosheng.github.io{{ site.baseurl }}{{ page.url }}" style="margin:auto"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"jekylldemo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script src="{{site.baseurl}}/js/countdown/jquery.js"></script>
+<script src="{{site.baseurl}}/js/countdown/bootstrap-transition.js"></script> 
+<script src="{{site.baseurl}}/js/countdown/bootstrap-tooltip.js"></script> 
+<script type="text/javascript" src="{{site.baseurl}}/js/countdown/jquery.countdown.min.js"></script> 
+<script type="text/javascript" src="{{site.baseurl}}/js/countdown/jquery.ui.map.min.js"></script> 
+<script type="text/javascript" src="{{site.baseurl}}/js/countdown/jquery.custom.js"></script>
+
+
+</body>
+<script  type="text/javascript">
+$youziku.load(".hero-unit", "249aca46609042ccbf38e9a74943947b", "NaiYou");
+/*[．．．]*/
+$youziku.draw();
+</script>
+</html>
