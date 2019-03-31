@@ -1,4 +1,4 @@
-baseurl: /jekyll_demo
+baseurl: /
 encoding: utf-8
 gems:
   - jekyll-srcset
