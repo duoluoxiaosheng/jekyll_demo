@@ -100,5 +100,17 @@ if (!document.createElement('canvas').getContext) {
 	$("#code").typewriter();
 }
 </script>
+<script src="https://unpkg.com/netlify-cms@^2.0/dist/cms.js"></script>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
